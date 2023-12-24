@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Spot Recommendations</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #f08080, #87cefa, #32cd32); /* Indian-inspired background with different colors */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333; /* Dark text color for better visibility */
+        }
+
+        .result-container {
+            background: linear-gradient(45deg, #2f4f4f, #1e90ff); /* Adventurous and dark box background with dark blue */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            color: #fff; /* Light text color for better visibility */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 28px; /* Increased font size */
+            color: #ff6347; /* Reddish color for the title */
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        p.result {
+            font-weight: bold;
+            font-size: 20px; /* Increased font size */
+        }
+
+        .thank-you {
+            font-style: italic;
+            font-size: 16px; /* Increased font size */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="result-container">
+        <h1>Personalised Result</h1>
+        <p class="result">Recommended Tourist Spots:</p>
+        {% for place in result %}
+            <p>{{ place }}</p>
+        {% endfor %}
+        <p class="thank-you">Enjoy Your Journey!</p>
+    </div>
+</body>
+
+</html>

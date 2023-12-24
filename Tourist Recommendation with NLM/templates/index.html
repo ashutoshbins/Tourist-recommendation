@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anomaly Detection</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #ffdb58, #ff6347); /* Indian-style colors */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            max-width: 60%; /* Set the maximum width to 60% */
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #8b4513; /* SaddleBrown color */
+            font-size: 2em; /* Decreased font size */
+            margin-bottom: 15px; /* Reduced margin */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333; /* Dark color for better visibility */
+            font-size: 1.3em;
+            text-align: left;
+        }
+
+        textarea,
+        select {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        input[type="submit"] {
+            background-color: #a0522d; /* Sienna color */
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em; /* Decreased font size */
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #8b4513; /* SaddleBrown color */
+        }
+
+        #categories {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background: linear-gradient(45deg, #ff6347, #ffdb58);
+            color: #fff;
+            padding: 8px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 150px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="/submit_note" method="post">
+        <h1>Embark</h1>
+        <label for="note">Describe the type of place you want to visit:</label>
+        <textarea id="note" name="note" rows="4" required placeholder="E.g., A serene mountain village, a bustling city, a tropical island..."></textarea><br>
+        <input type="submit" value="Discover">
+    </form>
+
+    <div id="categories">
+        <strong>Categories:</strong>
+        <br>Food
+        <br>Scenic
+        <br>Adventure
+        <br>Local
+        <br>History
+    </div>
+
+</body>
+
+</html>
